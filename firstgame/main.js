@@ -3,11 +3,11 @@ var mainState = {
 		game.load.image("player","assets/player.png");
 	},
 create: function() {
-  game.state.backgroundColor = '#3498db';
-  game.physics.startSystem(phaser.Physics.ARCADE);
-  game.renderer.rendererSession.roundPixels = true;
+  game.stage.backgroundColor = '#3498db';
+  game.physics.startSystem(Phaser.Physics.ARCADE);
+  game.renderer.renderSession.roundPixels = true;
   var player = game.add.sprite(game.width/250, 170, 'player');
-  this.player = game.add.sprite(game.width/2, height/2,'player');
+  this.player = game.add.sprite(game.width/2, game.height/2,'player');
   this.player.anchor.setTo(0.5,0.5);
   game.physics.arcade.enable(this.player);
   this.player.body.gravity.y = 500;
@@ -15,6 +15,7 @@ create: function() {
 },
 	update: function(){
 		this.movePlayer();
+		
 	},
 
 	movePlayer: function(){
@@ -35,7 +36,7 @@ create: function() {
 		}
 	}
 };
-var game = new phaser.Game(500, 340, Phaser.AUTO,'gameDiv');
+var game = new Phaser.Game(500, 340, Phaser.AUTO,'gameDiv');
 
 game.state.add("main",mainState);
  game.state.start("main");

@@ -5,7 +5,7 @@ var mainState = {
 
 	},
 create: function() 
-  game.state.backgroundColor = '£3498db';
+  game.state.backgroundColor = '#3498db';
 
   game.physics.startSystem(phaser.physics.ARCADE);
 

@@ -1,9 +1,8 @@
 var mainState = {
-	
 	preload: function() {
 		game.load.image("player","assets/player.png");
 	},
-create: function() 
+create: function() {
   game.state.backgroundColor = '#3498db';
   game.physics.startSystem(phaser.Physics.ARCADE);
   game.renderer.rendererSession.roundPixels = true;

@@ -1,7 +1,7 @@
 var mainState = {
 	
 	preload: function() {
-		game.load.imagine("player","assets/player.png");
+		game.load.image("player","assets/player.png");
 	},
 create: function() 
   game.state.backgroundColor = '#3498db';
